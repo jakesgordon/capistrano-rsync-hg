@@ -1,12 +1,12 @@
 module Capistrano
   module Rsync
     NAME        = "capistrano-rsync-hg"
-    VERSION     = "0.1.0"
+    VERSION     = "0.1.1"
     AUTHORS     = [ "Jake Gordon" ]
     EMAIL       = "jake@codeincomplete.com"
-    HOMEPAGE    = "http://codeincomplete.com/"
+    HOMEPAGE    = "https://github.com/jakesgordon/capistrano-rsync-hg"
     SUMMARY     = "Capistrano v3 deploy with rsync from a local Hg repository"
-    DESCRIPTION = "Deploy your application using Capistrano v3 without requiring SCM access on the server - checkout the repository locally (using Hg) and deploy with Rsync"
+    DESCRIPTION = "Capistrano v3 deploy with rsync from a local Hg repository without requiring SCM access on the server"
     LICENSE     = "MIT"
   end
 end
