@@ -8,6 +8,7 @@ end
 namespace :load do
   task :defaults do
     set :rsync_exclude, %w[.hg*]
+    set :rsync_include, %w[    ]
     set :rsync_options, %w[--archive --recursive --delete --delete-excluded]
     set :copy_command,  "rsync --archive --acls --xattrs"
     set :local_cache,   ".rsync_#{fetch(:stage)}"
@@ -48,6 +49,7 @@ namespace "rsync" do
 
       rsync_args = []
       rsync_args.concat fetch(:rsync_options)
+      rsync_args.concat fetch(:rsync_include, []).map{|e| "--include #{e}"}
       rsync_args.concat fetch(:rsync_exclude, []).map{|e| "--exclude #{e}"}
       rsync_args << fetch(:local_cache) + "/"
       rsync_args << "#{user}#{role.hostname}:#{remote_cache.call}"

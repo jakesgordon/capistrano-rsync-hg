@@ -26,6 +26,7 @@ And add other related options to your liking:
     set :repo_url,       "ssh://hg@bitbucket.org/myusername/myrepository"
     set :branch,         "default"
     set :rsync_exclude,  %w[ .hg* ]
+    set :rsync_include,  %w[      ]
     set :rsync_options,  %w[ --archive --recursive --delete --delete-excluded ]
     set :local_cache,    ".cache_#{fetch(:stage)}"
     set :remote_cache,   "shared/cache"
@@ -34,6 +35,7 @@ And add other related options to your liking:
  * `:repo_url` - the repository to clone.
  * `:branch` - the branch to checkout.
  * `:rsync_exclude` - array of files/paths to exclude from rsync (optional).
+ * `:rsync_include` - array of files/paths to override subset of `:rsync_exclude` (optional).
  * `:rsync_options` - additional rsync options (optional).
  * `:local_cache` - the local cache folder (where the repo will be checked out) - either absolute or relative to the local project root.
  * `:remote_cache` - the remote cache folder (where the files will be rsynced to) - either absolute or relative to capistrano `deploy_to` variable.

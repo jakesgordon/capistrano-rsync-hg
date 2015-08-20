@@ -1,7 +1,7 @@
 module Capistrano
   module Rsync
     NAME        = "capistrano-rsync-hg"
-    VERSION     = "0.1.1"
+    VERSION     = "0.1.2"
     AUTHORS     = [ "Jake Gordon" ]
     EMAIL       = "jake@codeincomplete.com"
     HOMEPAGE    = "https://github.com/jakesgordon/capistrano-rsync-hg"
