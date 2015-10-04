@@ -4,7 +4,7 @@ Deploy with Rsync to your server from a local Mercurial repository when using Ca
 you from having to install Mercurial on your production machine and allows you to customize which
 files you want to deploy.
 
->> **NOTE**: This library is a derivation of a Git flavored original [moll/capistrano-rsync](https://github.com/moll/capistrano-rsync)
+>> **NOTE**: This library has a Git flavored version at [jakesgordon/capistrano-rsync-git](https://github.com/jakesgordon/capistrano-rsync-git)
 
 ## Using
 
